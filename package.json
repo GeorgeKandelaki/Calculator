@@ -1,0 +1,15 @@
+{
+	"devDependencies": {
+		"sass": "^1.77.8"
+	},
+	"name": "calculator",
+	"version": "1.0.0",
+	"description": "Normal Calculator",
+	"main": "index.js",
+	"dependencies": {},
+	"scripts": {
+		"watch:sass": "sass sass/main.scss css/style.css -w"
+	},
+	"author": "George Kandelaki",
+	"license": "ISC"
+}

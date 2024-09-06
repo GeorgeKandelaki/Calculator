@@ -1,0 +1,199 @@
+$color-screen: #182034;
+$color-keypad: #232c43;
+
+$color-white: #ffffff;
+
+$color-red-light-1: #d03f2f;
+$color-red-dark-1: #93261a;
+
+$color-blue-dark-1: #637097;
+$color-blue-dark-2: #404e72;
+$color-blue-dark-3: #3a4764;
+
+$color-grey-light-1: #eae3dc;
+$color-grey-light-2: #b4a597;
+$color: #1b2428;
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+
+	@media only screen and (max-width: 37.5em) {
+		font-size: 50%;
+	}
+}
+
+body {
+	box-sizing: border-box;
+	font-size: 1.8rem;
+	background-color: $color-blue-dark-3;
+	font-family: "League Spartan", sans-serif;
+	font-weight: 400;
+	padding: 2.5rem 5rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.header {
+	max-width: 54rem;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	margin-bottom: 3.6rem;
+
+	h2 {
+		margin-right: auto;
+	}
+}
+
+.heading-secondary {
+	color: $color-white;
+	font-size: 3.2rem;
+}
+
+.calculator {
+	max-width: 55rem;
+	width: 100%;
+
+	&__input-box {
+		margin-bottom: 3rem;
+	}
+
+	&__input {
+		color: $color-white;
+		letter-spacing: 2px;
+		font-size: 6rem;
+		font-weight: 700;
+		text-align: right;
+		width: 100%;
+		padding: 3.6rem 3.2rem;
+		background-color: $color-screen;
+		border-radius: 1rem;
+		border: none;
+		font-family: inherit;
+	}
+
+	&__keypad {
+		background-color: $color-keypad;
+		padding: 3.2rem;
+		border-radius: 1rem;
+
+		display: grid;
+		grid-template-columns: repeat(4, minmax(min-content, 1fr));
+		grid-template-rows: repeat(5, minmax(7rem, 1fr));
+		grid-gap: 2.5rem;
+	}
+
+	&__key {
+		background-color: $color-grey-light-1;
+		box-shadow: 0 0.6rem 0 $color-grey-light-2;
+		font-size: 4rem;
+		color: $color-screen;
+
+		&,
+		&--reset,
+		&--equal,
+		&--delete {
+			cursor: pointer;
+			font-weight: 700;
+			border-radius: 1rem;
+			border: none;
+			font-family: "League Spartan", sans-serif;
+			line-height: 1;
+			transition: filter 0.3s;
+			width: 100%;
+
+			&:hover {
+				filter: brightness(150%);
+			}
+		}
+
+		&--reset {
+			font-size: 3.2rem;
+			grid-column: 1 / span 2;
+			background-color: $color-blue-dark-1;
+			color: $color-white;
+
+			box-shadow: 0 0.6rem 0 $color-blue-dark-2;
+		}
+
+		&--equal {
+			font-size: 3.2rem;
+			grid-column: 3 / -1;
+			background-color: $color-red-light-1;
+			color: $color-white;
+			box-shadow: 0 0.6rem 0 $color-red-dark-1;
+		}
+
+		&--delete {
+			font-size: 3.2rem;
+			background-color: $color-blue-dark-1;
+			color: $color-white;
+			box-shadow: 0 0.6rem 0 $color-blue-dark-2;
+		}
+	}
+}
+
+.theme {
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+	width: 15rem;
+
+	&__name {
+		font-size: 1.5rem;
+		letter-spacing: 2px;
+		color: $color-white;
+		font-weight: 700;
+	}
+
+	&__switcher {
+		width: 100%;
+	}
+
+	&__nums {
+		display: flex;
+		justify-content: space-around;
+		color: $color-white;
+		font-weight: 700;
+		margin-bottom: 5px;
+		cursor: pointer;
+	}
+
+	&__num {
+		display: block;
+		transition: all 0.3s;
+	}
+
+	&__num:hover {
+		transform: scale(1.5);
+	}
+
+	&__switch-box {
+		grid-column: 2 / -1;
+		height: 3rem;
+		width: 10rem;
+		background-color: $color-screen;
+		width: 100%;
+		border-radius: 10rem;
+		padding: 0.5rem;
+	}
+
+	&__switch {
+		display: inline-block;
+		background-color: $color-red-light-1;
+		border-radius: 50%;
+		width: 2rem;
+		height: 2rem;
+		transition: all 0.5s;
+	}
+}

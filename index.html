@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<title>Frontend Mentor | Calculator app</title>
+
+		<link rel="stylesheet" href="css/style.css" />
+
+		<!-- Feel free to remove these styles or customise in your own styleshuc heet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+				display: none;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+
+		<script src="js/index.js " defer></script>
+	</head>
+	<body>
+		<header class="header">
+			<h2 class="heading-secondary">calc</h2>
+
+			<div class="theme">
+				<span class="theme__name">THEME</span>
+				<div class="theme__switcher">
+					<div class="theme__nums">
+						<span class="theme__num" data-type="0">1</span>
+						<span class="theme__num" data-type="1">2</span>
+						<span class="theme__num" data-type="2">3</span>
+					</div>
+					<div class="theme__switch-box">
+						<span class="theme__switch">&nbsp;</span>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="calculator">
+			<div class="calculator__input-box">
+				<input class="calculator__input" type="text" readonly />
+			</div>
+
+			<div class="calculator__keypad">
+				<button class="calculator__key calculator__key--1" value="7">
+					7</button
+				><button class="calculator__key calculator__key--2" value="8">
+					8</button
+				><button class="calculator__key calculator__key--3" value="9">
+					9</button
+				><button class="calculator__key--delete" value="DEL">DEL</button
+				><button class="calculator__key calculator__key--5" value="4">
+					4</button
+				><button class="calculator__key calculator__key--6" value="5">
+					5</button
+				><button class="calculator__key calculator__key--7" value="6">
+					6</button
+				><button
+					class="calculator__key calculator__key--plus"
+					value="+"
+				>
+					+</button
+				><button class="calculator__key calculator__key--9" value="1">
+					1</button
+				><button class="calculator__key calculator__key--10" value="2">
+					2</button
+				><button class="calculator__key calculator__key--11" value="3">
+					3</button
+				><button
+					class="calculator__key calculator__key--menus"
+					value="-"
+				>
+					-</button
+				><button class="calculator__key calculator__key--dot" value=".">
+					.</button
+				><button class="calculator__key calculator__key--14" value="0">
+					0</button
+				><button
+					class="calculator__key calculator__key--divide"
+					value="/"
+				>
+					/</button
+				><button
+					class="calculator__key calculator__key--multiply"
+					value="*"
+				>
+					X
+				</button>
+
+				<button class="calculator__key--reset" value="RESET">
+					RESET
+				</button>
+
+				<button class="calculator__key--equal" value="=">=</button>
+			</div>
+		</main>
+
+		<div class="attribution">
+			Challenge by
+			<a
+				href="https://www.frontendmentor.io?ref=challenge"
+				target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Your Name Here</a>.
+		</div>
+	</body>
+</html>
